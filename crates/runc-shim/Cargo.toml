@@ -16,13 +16,14 @@ homepage = "https://containerd.io"
 # Example: https://github.com/containerd/containerd/blob/8047eb2fcac1f4553ee7652862194b1e10855ce7/task_opts_unix.go#L33
 name = "containerd-shim-runc-v2-rs"
 path = "src/main.rs"
+doc = false
 
 [features]
 async = ["containerd-shim/async", "runc/async", "tokio", "futures", "async-trait"]
 
 [dependencies]
 log = "0.4"
-nix = "0.23.1"
+nix = "0.24.1"
 libc = "0.2.95"
 time = { version = "0.3.7", features = ["serde", "std"] }
 serde = { version = "1.0.133", features = ["derive"] }
